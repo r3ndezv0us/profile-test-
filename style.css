@@ -1,0 +1,205 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #08090c;
+  color: white;
+  font-family:
+    Arial,
+    sans-serif;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  width: 500px;
+  height: 500px;
+  background: 6366f1;
+  filter: blur(180px);
+  opacity: 0, 12;
+  top: -200px
+  left: -200px;
+  animation: movelight 12s infinite
+alternate;
+  pointer-event: none;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  width: 500px;
+  height: 500px;
+  back ground: #9333ea;
+  filter: blur(180px);
+  opacity: 0.10;
+  right: -200px
+  left: -200px;
+  animation: movelight2 15s infinite
+alternate;
+  pointer-events: none;
+}
+
+@keyframes movelight {
+  from {
+    transform: translate(0,0);
+  }
+  to {
+    transform:
+translate(150px, 100px);
+  }
+}
+
+@keyframes movelight2 {
+  from { 
+    transform: translate(0,0);
+  }
+  to {
+    transform:
+translate(-120px, -100px);
+  }
+}
+
+
+.container {
+  width: min(600px, 92%);
+  margin: auto;
+  padding: 
+    60px 0
+    30px;
+  position: relative;
+  z-index: 1;
+}
+
+.profile-img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  border:
+    3px solid
+    rgba(255,255,255,.1);
+  box-shadow:
+    0 0 35px
+    rgba(100, 100, 255, .15);
+}
+
+h1 {
+  margin:
+    18px 0 5px;
+  font-size: 32px;
+}
+.profile P {
+  color: #999;
+  margin: 7px 0;
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin: 20px 0;
+}
+
+.socials a {
+  color: #aaa;
+  text-decoration: none;
+  transition: .2s;
+}
+
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding:
+    8px 14px;
+  border-radius: 30px;
+  background:
+    rgba(255, 255, 255, .05);
+  font-size: 13px;
+}
+
+.status-dot {
+  width: 9px;
+  height: 9px;
+
+  border-radius: 50%;
+}
+
+.online {
+  background: #35d06f;
+  box-shadow:
+    0 0 10px
+    #35d06f;
+}
+
+.card {
+  background:
+    rgba(20,20,25,.7);
+  border:
+    1px solid
+    rgba(255,255,255,.07);
+  border-radius: 18px;
+  padding:22px;
+  margin:14px 0;
+  backdrop-filter:
+    blur(15px);
+}
+.card h2 {
+  font-size: 16px;
+  margin-top: 0;
+  margin-bottom: 18px;
+}
+
+.card p {
+  color: #aaa;
+  line-height: 1.6;
+}
+
+.album {
+  width: 58px;
+  height: 58px;
+  border-radius: 10px;
+  background:
+    liner-gradient(
+      135deg,
+      #252733
+      #111217
+    );
+  display: grid;
+  place-items: center;
+  font-size: 25px;
+}
+
+.bar {
+  height: 7px;
+  background: #292a32;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.bar span {
+  display: block;
+  height: 100%;
+  background: #eee;
+  border-radius: 10px;
+}
+
+.visitor {
+  text-align: center;
+  color: #666;
+  font-size: 13px;
+  margin:
+    28px 0 15px;
+}
+
+footer {
+  text-align: center;
+  color: #555;
+  font-size: 12px;
+}
+
+  
